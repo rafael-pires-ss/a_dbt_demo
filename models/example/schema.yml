@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: '{{ doc("table_first_desc") }}'
+    columns:
+      - name: id
+        description: '{{ doc("primary_key_desc") }}'
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: '{{ doc("primary_key_desc") }}'
+        tests:
+          - unique
+          - not_null
